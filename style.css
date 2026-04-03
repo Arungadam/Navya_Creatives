@@ -1,0 +1,269 @@
+/* General Body Overhaul */
+body {
+    margin: 0;
+    font-family: 'Segoe UI', Arial, sans-serif;
+    text-align: center;
+    background-color: #e6e59c; /* Creamier, more premium than lightyellow */
+    color: #4a3728; /* Dark brown for better readability */
+}
+
+header {
+    background-color:beige;
+    padding: 30px 10px;
+    border-bottom: 2px solid #6B8E23;
+}
+
+header h1 {
+    color:#4a3728; /* Olive green for a natural, earthy feel */
+    font-weight: 700;
+    letter-spacing: 2px;
+    margin-bottom: 0;
+}
+
+/* Modern Navigation */
+nav {
+    background-color: #6B8E23; /* Matching olive green */
+    padding: 12px;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+nav a {
+    color: white !important;
+    text-decoration: none;
+    margin: 0 15px;
+    font-weight: 600;
+    font-size: 1.1rem;
+    cursor: pointer;
+}
+
+/* Home Section */
+#home {
+    background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), 
+                url('C:/Users/hi/OneDrive/Documents/Desktop/Navya creatives/Gemini_Generated_Image_iqscqxiqscqxiqsc.png');
+    background-size: cover;
+    background-position: center;
+    height: 500px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.ov {
+    background: rgba(255, 255, 255, 0.85); /* Semi-transparent box for text */
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+}
+
+.ov h2 { color: #d35400; }
+
+/* Grid Fix: Important for JS toggle */
+.products-container {
+    display: none; /* Initially hidden */
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+    padding: 20px;
+    max-width: 1300px;
+    margin: 0 auto;
+}
+
+/* Desktop Breakpoints */
+@media (min-width: 768px) { .products-container { grid-template-columns: repeat(3, 1fr); } }
+@media (min-width: 1024px) { .products-container { grid-template-columns: repeat(4, 1fr); } }
+
+/* Product Card Fixes */
+.product {
+    background: white;
+    border: 1px solid #ddd;
+    border-radius: 12px;
+    padding: 10px;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+}
+
+.product img {
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+    border-radius: 8px;
+}
+/* About Section */
+.about-section {
+  background: #f9f9f9;
+  padding: 50px 20px;
+}
+
+/* Container */
+.about-container {
+  max-width: 900px;
+  margin: auto;
+  text-align: center;
+}
+
+/* Heading */
+.about-container h2 {
+  font-size: 28px;
+  color: #4A2C2A;
+  margin-bottom: 20px;
+}
+
+/* Paragraphs */
+.about-container p {
+  font-size: 16px;
+  color: #555;
+  line-height: 1.7;
+  margin-bottom: 15px;
+}
+/* 1. The Main Grid Container for Features */
+/* 1. Features Grid - Meesho Style */
+/* Features Grid Setup */
+#features {
+    display: none; /* Toggle via JS */
+    grid-template-columns: repeat(2, 1fr); /* 2 per row on mobile */
+    gap: 15px;
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Responsive Breakpoints */
+@media (min-width: 768px) {
+    #features { grid-template-columns: repeat(4, 1fr); } /* 4 per row on Desktop */
+}
+
+/* The Professional Feature Card */
+.feature-card {
+    position: relative;
+    height: 200px;
+    border-radius: 15px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 15px;
+    background-color: #fdf5e6; /* Elegant Old Lace color */
+    border: 1px solid rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease;
+}
+
+.feature-card:hover {
+    transform: translateY(-5px);
+}
+
+/* Glassmorphism Effect */
+.feature-card::before {
+    content: "";
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: rgba(255, 255, 255, 0.4); 
+    backdrop-filter: blur(5px); /* Soft blur for professional look */
+    -webkit-backdrop-filter: blur(5px);
+    z-index: 1;
+}
+
+/* Text Content Positioning */
+.feature-card h3, .feature-card p {
+    position: relative;
+    z-index: 2;
+    margin: 0;
+}
+
+.feature-card h3 {
+    font-size: 16px;
+    color: #6B8E23; /* Brand Olive Green */
+    font-weight: 700;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.feature-card p {
+    font-size: 13px;
+    color: #555;
+    line-height: 1.5;
+}
+/* Contact Page Specific Layout */
+.contact-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    padding: 60px 20px;
+    max-width: 1100px;
+    margin: 0 auto;
+    text-align: left;
+}
+
+.contact-info {
+    flex: 1;
+    min-width: 300px;
+}
+
+.contact-info h2 {
+    font-size: 36px;
+    color: #6B8E23;
+    margin-bottom: 20px;
+}
+
+.info-item {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 20px;
+    background: white;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+}
+
+.contact-form-card {
+    flex: 1;
+    min-width: 350px;
+    background: rgba(107, 142, 35, 0.1); /* Soft brand color tint */
+    backdrop-filter: blur(10px);
+    padding: 40px;
+    border-radius: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.5);
+}
+
+.input-group input, .input-group textarea {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background: rgba(255,255,255,0.8);
+    font-size: 15px;
+}
+
+.send-btn {
+    width: 100%;
+    padding: 15px;
+    background: #6B8E23;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.send-btn:hover {
+    background: #4a3728;
+    transform: translateY(-2px);
+}
+
+/* Success Message Color */
+#formStatus {
+    margin-top: 15px;
+    font-weight: 600;
+    color: #2e7d32;
+    text-align: center;
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+    .contact-wrapper { flex-direction: column; padding: 30px 15px; }
+}
